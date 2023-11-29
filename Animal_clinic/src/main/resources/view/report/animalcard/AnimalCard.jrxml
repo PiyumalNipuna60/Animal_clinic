@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerName" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="74b244ff-fa59-45e8-8189-ada58001176f">
+	<parameter name="ID" class="java.lang.String"/>
+	<parameter name="Name" class="java.lang.String"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<parameter name="Time" class="java.lang.String"/>
+	<parameter name="DoctorID" class="java.lang.String"/>
+	<parameter name="DoctorName" class="java.lang.String"/>
+	<parameter name="AppointmentID" class="java.lang.String"/>
+	<parameter name="CustomerName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="30" uuid="28ad0e14-78cb-4f8f-add6-bc662555927b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Animal Clinic]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="450" y="26" width="100" height="18" uuid="ca7c31cd-e2af-4236-b9b0-c5137fec16e9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="480" y="43" width="75" height="17" uuid="d90e8d2a-9666-4d93-a0fa-1dfc030c30dc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="38" width="555" height="30" forecolor="#D050D9" uuid="35f25188-da8f-419d-be34-c7ce185875d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[schedule]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="65" width="555" height="1" forecolor="#ED1411" uuid="f8f183ce-41eb-492f-aa32-921958a1dfeb"/>
+			</line>
+			<image>
+				<reportElement x="9" y="15" width="50" height="50" uuid="5974d753-7f6a-4c98-87b7-68b364c495cd"/>
+				<imageExpression><![CDATA["view/assets/image/logo1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="360" splitType="Stretch">
+			<image>
+				<reportElement mode="Transparent" x="216" y="73" width="331" height="253" uuid="37b57708-b6a1-4cde-8f98-3c6557f21152"/>
+				<imageExpression><![CDATA["view/assets/image/scheduleImage.gif"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="173" y="40" width="100" height="30" uuid="6e6beca7-e3bb-4d8a-b39f-874345a45087"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="80" width="100" height="30" uuid="f989cb7a-ddfe-4703-9ba7-eb677c24af73"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="120" width="100" height="30" uuid="12ccb1c4-f53c-4d46-bca1-7c6bb882af44"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="160" width="100" height="30" uuid="5e8e6430-1cf3-4f6a-bfe3-a544c0113d12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="200" width="100" height="30" uuid="d428e28d-e962-45f8-96c4-e4e7d5c384df"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DoctorID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="240" width="100" height="30" uuid="d5a3c23c-3d7e-4cc3-a7e0-69a33b9acf04"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DoctorName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="280" width="100" height="30" uuid="5c827c51-b56a-4dc1-ba8b-7d9800463d37"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AppointmentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="323" width="100" height="30" uuid="d1307b1a-4bbc-486c-b04d-fccbf93e2239"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CustomerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="40" width="100" height="30" uuid="b73abb56-b3ba-420d-8a50-124bf94d0fc6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="80" width="100" height="30" uuid="9736d71f-d09b-485c-b314-127eec1f9352">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Name : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="100" height="30" uuid="6c7be892-4e78-4fa3-8bb7-c455c50cf504">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="160" width="100" height="30" uuid="2fdaf0d9-72b7-4e06-867d-60418bfee435">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Time : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="200" width="100" height="30" uuid="387f3f3f-2476-4f6a-b9db-d9d8d10cf946">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Doctor ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="240" width="130" height="30" uuid="efcdd8c6-56b5-4079-901c-46f93f6ee029">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Doctor Name : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="282" width="160" height="30" uuid="abeab9c9-9f32-4daa-99e0-30212ee632f4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[AppointmentID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="320" width="170" height="30" uuid="14b92cd6-62e0-4307-960d-c4c48fc11c8f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Customer Name : ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="39" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" forecolor="#ED1411" uuid="2420f704-1ad4-4b51-99c3-111b15b6a7a7"/>
+			</line>
+			<line>
+				<reportElement x="1" y="32" width="555" height="1" forecolor="#ED1411" uuid="4ccccb7a-f15f-4036-917f-17fced242fd1"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="3" width="555" height="30" uuid="f5ea91a5-8d00-4eb3-8278-2c4e95bd4965"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Thank You..!]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

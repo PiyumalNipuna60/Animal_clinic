@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="679.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DoctorFormController">
+   <children>
+      <Pane fx:id="secondPane" prefHeight="679.0" prefWidth="1081.0" styleClass="lblMainName" stylesheets="@css/mainStyle.css">
+         <children>
+            <Label layoutX="38.0" layoutY="17.0" prefHeight="41.0" prefWidth="191.0" text="Doctor Form" textFill="#961c7a">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="34.0" layoutY="54.0" prefHeight="0.0" prefWidth="540.0" />
+            <ScrollPane fx:id="scrollPane" layoutX="34.0" layoutY="119.0" prefHeight="542.0" prefWidth="1012.0" style="-fx-background-color: #BFBFBF;">
+               <content>
+                  <AnchorPane prefHeight="538.0" prefWidth="1010.0">
+                     <children>
+                        <VBox fx:id="vboxName" layoutX="71.0" layoutY="23.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="230.0" prefWidth="240.0" style="-fx-background-radius: 20;" />
+                        <VBox fx:id="vboxName2" layoutX="385.0" layoutY="25.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="250.0" style="-fx-background-radius: 20;" />
+                        <VBox fx:id="vboxName3" layoutX="699.0" layoutY="24.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="250.0" style="-fx-background-radius: 20;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearch" layoutX="746.0" layoutY="22.0" onAction="#searchOnAction" prefHeight="30.0" prefWidth="206.0" promptText="Search" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#4ca3e1" />
+         </effect>
+      </TextField>
+      <Button layoutX="949.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="18.0" prefWidth="90.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.5" />
+         </font>
+      </Button>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="963.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1009.0" layoutY="21.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/image/notification.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="363.0" layoutY="26.0" prefHeight="34.0" prefWidth="95.0" text="fgvfdg" textFill="#d00d14">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="468.0" layoutY="27.0" prefHeight="34.0" prefWidth="102.0" text="fgvfdg" textFill="#d00d14">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

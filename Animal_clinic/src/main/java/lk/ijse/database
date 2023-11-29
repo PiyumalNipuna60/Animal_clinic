@@ -1,0 +1,165 @@
+drop database if exists AnimalClinic;
+create database AnimalClinic;
+
+show databases;
+
+use AnimalClinic;
+
+create table User(
+                     id varchar(10) primary key ,
+                     name varchar(20),
+                     email varchar(50),
+                     contactNo varchar(10),
+                     password varchar(10)
+);
+
+insert into User value ('U001','gimhani','gimhani315np@gmail.com','0754585759','12345');
+
+desc User;
+
+create table Customer(
+                         id varchar(10) primary key ,
+                         name varchar(20),
+                          address text,
+                         email varchar(50),
+                         contactNo varchar(11),
+                         userId varchar(10),
+                         constraint foreign key (userId) references User(id) on delete cascade on update cascade
+);
+
+
+desc Customer;
+
+create table Doctor(
+                         id varchar(10) primary key ,
+                         name varchar(20),
+                         description text,
+                         email varchar(50),
+                         contactNo varchar(11),
+                         image LONGBLOB,
+                         userId varchar(10),
+                         constraint foreign key (userId) references User(id) on delete cascade on update cascade
+);
+
+
+desc Doctor;
+
+create table Orders(
+                       id varchar(10) primary key ,
+                       quantity_an_hand varchar(20),
+                       date varchar(10),
+                       total int,
+                       customerId varchar(10),
+                       constraint foreign key (customerId) references Customer(id) on delete cascade on update cascade
+);
+
+desc Orders;
+
+create table Item(
+                     id varchar(10) primary key ,
+                     description varchar(20),
+                     price int,
+                     count int
+
+);
+
+desc Item;
+
+create table Order_details(
+                              orderId varchar(10),
+                              itemId varchar(10),
+                              constraint foreign key (orderId) references Orders(id) on delete cascade on update cascade,
+                              constraint foreign key (itemId) references Item(id) on delete cascade on update cascade
+);
+
+desc Order_details;
+
+create table Supplier(
+                         id varchar(10) primary key ,
+                         name varchar(20),
+                         email varchar(20),
+                         c_number int
+
+);
+
+desc Supplier;
+
+create table Stock(
+
+                      itemId varchar(10),
+                      supplierId varchar(10),
+                      constraint foreign key (itemId) references Item(id) on delete cascade on update cascade,
+                      constraint foreign key (supplierId) references Supplier(id) on delete cascade on update cascade
+);
+
+desc Stock;
+
+
+create table Appointment(
+                            id varchar(10) primary key ,
+                            price int,
+                            date varchar(10),
+                            time varchar(10),
+                            customerId varchar(10),
+                            constraint foreign key (customerId) references Customer(id) on delete cascade on update cascade
+);
+
+desc Appointment;
+
+create table Services(
+                         id varchar(10) primary key ,
+                         type varchar(20),
+                         price varchar(20),
+                         in_time varchar(10),
+                         s_time varchar(10)
+
+);
+
+desc Services;
+
+create table Service_details(
+
+                                serviceId varchar(10),
+                                appointmentId varchar(10),
+                                constraint foreign key (serviceId) references Services(id) on delete cascade on update cascade,
+                                constraint foreign key (appointmentId) references Appointment(id) on delete cascade on update cascade
+);
+
+desc Stock;
+
+
+create table Animal(
+                       id varchar(10) primary key ,
+                       name varchar(20),
+                       age int,
+                       categories varchar(20),
+                       image LONGBLOB,
+                       customerId varchar(10),
+                       constraint foreign key (customerId) references Customer(id) on delete cascade on update cascade
+);
+
+desc Animal;
+
+create table DoctorMaintain(
+                               id varchar(10) primary key ,
+                               name varchar(20),
+                               email varchar(20),
+                               phone int,
+                               userId varchar(10),
+                               constraint foreign key (userId) references User(id) on delete cascade on update cascade
+);
+
+desc DoctorMaintain;
+
+create table Schedule(
+                         id varchar(10) primary key ,
+                         name varchar(20),
+                         time varchar(20),
+                         date varchar(10),
+                         doctorId varchar(10),
+                         appointmentId varchar(10),
+                         constraint foreign key (doctorId) references doctor(id) on delete cascade on update cascade,
+                         constraint foreign key (appointmentId) references Appointment(id) on delete cascade on update cascade
+);
+
+desc Schedule;

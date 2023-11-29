@@ -1,0 +1,171 @@
+
+.btn{
+        -fx-padding: 8 15 10 15;
+        -fx-background-insets: 0,0 0 5 0, 0 0 4 0, 0 0 5 0;
+        -fx-background-radius: 8;
+        -fx-background-color:
+                linear-gradient(from 0% 93% to 0% 100%, #8A6191 0%, #8A6191 100%),
+                #8A6191,
+                #8A6191,
+                radial-gradient(center 50% 50%, radius 100%, #EEE6F6, #EEE6F6);
+        -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+        -fx-font-weight: bold;
+        -fx-font-size: 1.1em;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btn:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%),
+            #CDB5E5,
+            #CDB5E5,
+            radial-gradient(center 50% 50%, radius 100%, #B084FF, #B084FF);
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+
+}
+
+.btn:focused{
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%),
+            #CDB5E5,
+            #CDB5E5,
+            radial-gradient(center 50% 50%, radius 100%, #B084FF, #B084FF);
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+
+.btn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+    -fx-border-color: #01BFDD;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+.btn Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , mediumvioletred , 0,0,0,2 );
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.lblMainName {
+}
+
+
+.btn2{
+    -fx-padding: 8 15 10 15;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0,0 0 5 0, 0 0 4 0, 0 0 5 0;
+    -fx-background-radius: 8;
+    /*-fx-background-color:*/
+    /*        linear-gradient(from 0% 93% to 0% 100%, #8A6191 0%, #8A6191 100%),*/
+    /*        #8A6191,*/
+    /*        #8A6191,*/
+    /*        radial-gradient(center 50% 50%, radius 100%, #EEE6F6, #EEE6F6);*/
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btn2:hover {
+    -fx-border-color:
+            linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%),
+            #CDB5E5,
+            #CDB5E5,
+            radial-gradient(center 50% 50%, radius 100%, #B084FF, #B084FF);
+    -fx-background-color: transparent;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+
+}
+
+.btn2:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+    -fx-border-color: #01BFDD;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btnSave{
+    -fx-padding: 8 15 10 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 4 0, 0 0 5 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #8A6191 0%, #8A6191 100%),
+            #8A6191,
+            #8A6191,
+            radial-gradient(center 50% 50%, radius 100%, #EEE6F6, #EEE6F6);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btnSave:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%),
+            #CDB5E5,
+            #CDB5E5,
+            radial-gradient(center 50% 50%, radius 100%, #B084FF, #B084FF);
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btnDelete{
+    -fx-padding: 8 15 10 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 4 0, 0 0 5 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #ed3749 0%, #ed3749 100%),
+            #ed3749,
+            #ed3749,
+            radial-gradient(center 50% 50%, radius 100%, #EEE6F6, #EEE6F6);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btnDelete:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #deb1a9 0%, #deb1a9 100%),
+            #deb1a9,
+            #deb1a9,
+            radial-gradient(center 50% 50%, radius 100%, #ed3749, #ed3749);
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btnUpdate{
+    -fx-padding: 8 15 10 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 4 0, 0 0 5 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #37a7ed 0%, #37a7ed 100%),
+            #37a7ed,
+            #37a7ed,
+            radial-gradient(center 50% 50%, radius 100%, #EEE6F6, #EEE6F6);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.btnUpdate:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #9cc1d9 0%, #9cc1d9 100%),
+            #9cc1d9,
+            #9cc1d9,
+            radial-gradient(center 50% 50%, radius 100%, #37a7ed, #37a7ed);
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}

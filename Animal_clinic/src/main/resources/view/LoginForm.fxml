@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="507.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="791.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/image/paws_banner.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="23.0" layoutY="11.0" prefHeight="504.0" prefWidth="331.0" style="-fx-background-color: #D8D6D9; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="99.0" layoutY="79.0" text="Animal clinic">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="72.0" layoutX="132.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/Ellipse1@2x.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="78.0" layoutY="164.0" text="User name">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="236.0" text="Password">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="56.0" layoutY="185.0" prefHeight="25.0" prefWidth="236.0" promptText="user Name" style="-fx-background-radius: 15;">
+               <effect>
+                  <DropShadow color="#5e94d6" height="1.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="0.0" />
+               </effect></TextField>
+            <TextField fx:id="txtPassword" layoutX="56.0" layoutY="259.0" prefHeight="25.0" prefWidth="236.0" promptText="*****" style="-fx-background-radius: 15;">
+               <effect>
+                  <DropShadow color="#5e94d6e3" height="1.0" offsetX="3.0" offsetY="3.0" radius="0.0" spread="0.37" width="0.0" />
+               </effect></TextField>
+            <ImageView fitHeight="41.0" fitWidth="16.0" layoutX="59.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/download2.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="85.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: purple; -fx-background-radius: 15;" text="Login" textFill="#f4edf4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="110.0" layoutY="380.0" text="create  an accon">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="186.0" layoutY="379.0" onDragDetected="#btnSignInOnAction" text="sign In" textFill="#371db7">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="47.0" layoutX="187.0" layoutY="412.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/image/Ellipse4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="26.0" layoutX="57.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/image/download2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="47.0" layoutX="146.0" layoutY="412.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/image/Ellipse3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="47.0" layoutX="104.0" layoutY="412.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/image/Ellipse2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Blend mode="BLUE" />
+         </effect>
+      </Pane>
+      <Pane layoutX="355.0" layoutY="14.0" prefHeight="504.0" prefWidth="424.0" style="-fx-border-color: black;" />
+      <ImageView fitHeight="492.0" fitWidth="409.0" layoutX="363.0" layoutY="26.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/image/Rectangle6.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="631.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnSignInOnAction" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: purple; -fx-background-radius: 15;" text="Sign in" textFill="#f4edf4">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

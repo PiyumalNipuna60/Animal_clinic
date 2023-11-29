@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3f09d71-dadb-4a01-846e-2a5a86c954ca">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band height="12" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="66" uuid="c8cb50a3-3f96-443d-9d82-0c22094e015a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Customer Page]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="60" width="536" height="1" uuid="179b285c-b101-4286-85cc-dc6de5de6a51"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="21" y="45" width="100" height="30" uuid="a15cd4b7-b872-4bc1-afc2-fcaf4bc99f42"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="485" y="46" width="100" height="30" uuid="64f97887-62c8-4a0a-871a-eb6cb624c444"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="550" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="70" width="100" height="30" uuid="01b839d3-e94b-4c4b-b2f3-620cb8a0033b"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="119" width="100" height="30" uuid="64649667-6764-426f-8b3b-4baecf4e0e09"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Name : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="165" width="100" height="30" uuid="96a5edd3-f79a-4cf4-8f78-9d45579e1845"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[address : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="191" y="74" width="100" height="30" uuid="884fb57f-3f4c-453d-a5f3-47fe30f995bb"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="120" width="100" height="30" uuid="61c35eed-49db-48f1-b919-73d2e31fa46b"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="160" width="160" height="30" uuid="8f7aa1e0-71b2-4ea3-86e5-d693b9f3bcfa"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="50" y="250" width="170" height="250" uuid="669a0778-6f10-41b1-86e0-f8e5694718a5"/>
+				<imageExpression><![CDATA["view/assets/image/doc2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="555" height="30" uuid="7e5424d8-de11-4ed7-a148-6ab9af18fabf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Thank You]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
