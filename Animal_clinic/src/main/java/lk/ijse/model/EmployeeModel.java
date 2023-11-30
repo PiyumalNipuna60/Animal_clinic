@@ -125,4 +125,19 @@ public class EmployeeModel {
         }
     }
 
+    public int getCount() {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement pstm = connection.prepareStatement("select * from Employee;");
+            ResultSet rst = pstm.executeQuery();
+            int count=0;
+            while (rst.next()){
+                count++;
+            }
+
+            return count;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

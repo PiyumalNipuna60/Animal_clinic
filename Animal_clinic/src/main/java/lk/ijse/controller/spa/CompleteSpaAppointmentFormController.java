@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.dto.AppointmentDTO;
-import lk.ijse.dto.tm.SpaAppointmentTM;
+import lk.ijse.dto.SpaAppointmentDTO;
 import lk.ijse.model.Appointment;
 import lk.ijse.model.SpaAppointmentModel;
 
@@ -23,25 +23,20 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class SpaAppointmentFormController {
-    public TextField txtTime;
-    public TextField txtDate;
-    public TextField txtID;
-    public TableColumn colID;
-    public TableColumn colDate;
-    public TableColumn colPrice;
-    public TableColumn colTime;
-    public ComboBox <String> txtCustomerID;
-    public TableView<SpaAppointmentTM> tblAppoinments;
-    public TableColumn colCustomerID;
+public class CompleteSpaAppointmentFormController {
 
+    static CompleteSpaAppointmentFormController spaAppointmentFormController;
     public Label lblDate;
-
     public Label lblTime;
-    static SpaAppointmentFormController appointmentFormController;
-    public TableColumn colCustomerName;
-    public TableColumn colAnimalId;
     public TableColumn colStatus;
+    public TableColumn colAnimalId;
+    public TableColumn colCustomerID;
+    public TableColumn colTime;
+    public TableColumn colPrice;
+    public TableColumn colDate;
+    public TableColumn colID;
+    public TableView tblAppoinments;
+    public TextField txtSearch;
 
     public void initialize(){
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -49,11 +44,10 @@ public class SpaAppointmentFormController {
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
         colCustomerID.setCellValueFactory(new PropertyValueFactory<>("customerId"));
-        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         colAnimalId.setCellValueFactory(new PropertyValueFactory<>("animalId"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        appointmentFormController=this;
+        spaAppointmentFormController=this;
         generateRealTime();
         loadData();
         generateRealTime();
@@ -61,23 +55,19 @@ public class SpaAppointmentFormController {
 
     public void loadData(){
         SpaAppointmentModel spaAppointmentModel = new SpaAppointmentModel();
-        ArrayList<SpaAppointmentTM> all = spaAppointmentModel.getAllAppintment();
+        ArrayList<SpaAppointmentDTO> all = spaAppointmentModel.getAll();
         tblAppoinments.getItems().setAll(FXCollections.observableArrayList(all));
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
-        String id = txtID.getText();
-        Appointment appointment=new Appointment();
-        AppointmentDTO appointmentDTO =appointment.searchAppointment(id);
+        String id = txtSearch.getText();
+        SpaAppointmentModel spaAppointmentModel = new SpaAppointmentModel();
+        SpaAppointmentDTO spaAppointmentDTO = spaAppointmentModel.searchAppointment(id);
 
-        if (appointmentDTO==null){
+        if (spaAppointmentDTO==null){
             new Alert(Alert.AlertType.ERROR,"Empty value...").show();
 
         }else {
-            txtTime.setText(String.valueOf(appointmentDTO.getTime()));
-            txtDate.setText(appointmentDTO.getDate());
-            txtTime.setText(appointmentDTO.getTime());
-
         }
     }
 
@@ -97,4 +87,6 @@ public class SpaAppointmentFormController {
         timeline.play();
     }
 
+    public void btnPrintOnAction(ActionEvent actionEvent) {
+    }
 }

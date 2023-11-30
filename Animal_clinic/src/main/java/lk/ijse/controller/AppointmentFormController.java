@@ -38,6 +38,7 @@ public class AppointmentFormController {
     public Label lblTime;
     static AppointmentFormController appointmentFormController;
 
+
     public void initialize(){
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
