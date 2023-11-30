@@ -21,7 +21,7 @@
                <children>
                   <Pane layoutX="7.0" layoutY="7.0" prefHeight="50.0" prefWidth="1071.0">
                      <children>
-                        <TextField layoutX="759.0" layoutY="13.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="206.0" promptText="Search..." style="-fx-background-radius: 30;">
+                        <TextField fx:id="txtSearch" layoutX="766.0" layoutY="13.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="206.0" promptText="Search..." style="-fx-background-radius: 30;">
                            <effect>
                               <InnerShadow color="#4ca3e1" />
                            </effect></TextField>
@@ -38,16 +38,18 @@
                         <Separator layoutX="35.0" layoutY="40.0" prefHeight="1.0" prefWidth="513.0" />
                      </children>
                   </Pane>
-                  <TableView fx:id="tblAppoinments" layoutX="33.0" layoutY="114.0" prefHeight="560.0" prefWidth="1022.0">
+                  <TableView fx:id="tblAppoinments" layoutX="33.0" layoutY="114.0" prefHeight="547.0" prefWidth="1022.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="146.39999103546143" text="ID" />
-                        <TableColumn fx:id="colDate" prefWidth="215.2000274658203" text="Date" />
-                        <TableColumn fx:id="colPrice" prefWidth="268.7999267578125" text="Price" />
-                        <TableColumn fx:id="colTime" prefWidth="244.800048828125" text="Time" />
-                        <TableColumn fx:id="colCustomerID" prefWidth="143.0" text="CustomerID" />
+                        <TableColumn fx:id="colID" prefWidth="125.00003051757812" text="ID" />
+                        <TableColumn fx:id="colDate" prefWidth="152.0" text="Date" />
+                        <TableColumn fx:id="colPrice" prefWidth="176.0" text="Price" />
+                        <TableColumn fx:id="colTime" prefWidth="124.0" text="Time" />
+                        <TableColumn fx:id="colCustomerID" prefWidth="138.0" text="CustomerID" />
+                        <TableColumn fx:id="colAnimalId" prefWidth="163.0" text="AnimalId" />
+                        <TableColumn fx:id="colStatus" prefWidth="142.0" text="Status" />
                      </columns>
                   </TableView>
-                  <Button layoutX="949.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Add">
+                  <Button layoutX="933.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="37.0" prefWidth="111.0" style="-fx-background-color: #81bf46; -fx-background-radius: 15;" text="+ Print">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -62,16 +64,21 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="982.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="988.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/image/mail.png" />
+                        <Image url="@../assets/image/mail.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1028.0" layoutY="17.0" pickOnBounds="true">
                      <image>
-                        <Image url="@assets/image/notification.png" />
+                        <Image url="@../assets/image/notification.png" />
                      </image>
                   </ImageView>
+                  <Button layoutX="809.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="37.0" prefWidth="111.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Modify">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
          </children>

@@ -190,3 +190,18 @@ create table SpaSchedule(
 );
 
 desc SpaSchedule;
+
+
+create table SpaAppointment(
+                            id varchar(10) primary key ,
+                            price int,
+                            date varchar(10),
+                            time varchar(10),
+                            customerId varchar(10),
+                            AnimalId varchar(10),
+                            status varchar(10),
+                            constraint foreign key (AnimalId) references Animal(id) on delete cascade on update cascade,
+                            constraint foreign key (customerId) references Customer(id) on delete cascade on update cascade
+);
+
+desc SpaAppointment;
