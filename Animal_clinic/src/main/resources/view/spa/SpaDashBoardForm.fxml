@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="679.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.spa.SpaDashBoardForm2Controller">
+   <children>
+      <Pane fx:id="secondPane" layoutX="3.0" layoutY="2.0" prefHeight="679.0" prefWidth="1081.0" styleClass=".lblMainName" stylesheets="@css/mainStyle.css">
+         <children>
+            <Pane layoutX="38.0" layoutY="76.0" prefHeight="355.0" prefWidth="699.0" style="-fx-background-color: BFBFBF; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <ImageView fitHeight="337.0" fitWidth="682.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/image/grahp2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="246.0" layoutX="437.0" layoutY="-71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/dogRun2.gif" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane layoutX="38.0" layoutY="460.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #05B8C1; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="23.0" layoutY="46.0" text="Customer Count">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCustomerCount" layoutX="84.0" layoutY="93.0" text="00">
+                     <font>
+                        <Font size="56.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.27" color="#5077b2" height="34.21" radius="20.4925" width="49.76" />
+               </effect></Pane>
+            <Pane layoutX="301.0" layoutY="460.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #D0A2FA; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="7.0" layoutY="45.0" text="Appoinment Count">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAppoinmentCount" layoutX="83.0" layoutY="93.0" text="00">
+                     <font>
+                        <Font size="56.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.27" color="#5077b2" height="34.21" radius="20.4925" width="49.76" />
+               </effect></Pane>
+            <Pane layoutX="560.0" layoutY="460.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #A1F546; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="38.0" layoutY="42.0" text="Animal masaj">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAnimalServiceCount" layoutX="87.0" layoutY="93.0" text="00">
+                     <font>
+                        <Font size="56.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.27" color="#5077b2" height="34.21" radius="20.4925" width="49.76" />
+               </effect></Pane>
+            <Pane layoutX="814.0" layoutY="460.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #F5A146; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="22.0" layoutY="40.0" text="Employee Count">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmployeeCount" layoutX="81.0" layoutY="93.0" text="00">
+                     <font>
+                        <Font size="56.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.27" color="#5077b2" height="34.21" radius="20.4925" width="49.76" />
+               </effect></Pane>
+            <Pane layoutX="759.0" layoutY="214.0" prefHeight="217.0" prefWidth="287.0" style="-fx-background-color: BFBFBF; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <ImageView fitHeight="202.0" fitWidth="277.0" layoutX="5.0" layoutY="7.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assets/image/scheduleImage.gif" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="5.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnScheduleOnAction" prefHeight="202.0" prefWidth="277.0" styleClass="btn2" stylesheets="@../assets/css/mainStyle.css" />
+               </children></Pane>
+            <Pane layoutX="756.0" layoutY="76.0" prefHeight="117.0" prefWidth="287.0" style="-fx-background-color: #D192B7; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <children>
+                  <Label fx:id="lblTime" layoutX="90.0" layoutY="30.0" prefHeight="34.0" prefWidth="134.0" text="12.30.00" textAlignment="CENTER" textFill="#d01f1f">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="78.0" layoutY="61.0" prefHeight="34.0" prefWidth="134.0" text="2024-03-12" textAlignment="CENTER" textFill="#e12727">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <TextField layoutX="742.0" layoutY="24.0" onAction="#txtSearchOnAction" onInputMethodTextChanged="#txtSearchOnAction" prefHeight="32.0" prefWidth="230.0" promptText="search" style="-fx-background-radius: 30;">
+               <effect>
+                  <InnerShadow color="#4ca3e1" />
+               </effect></TextField>
+            <Label layoutX="38.0" layoutY="15.0" prefHeight="41.0" prefWidth="191.0" text="SPA Dashboard " textFill="#961c7a">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="34.0" layoutY="54.0" prefHeight="0.0" prefWidth="540.0" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="986.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1028.0" layoutY="23.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/image/notification.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

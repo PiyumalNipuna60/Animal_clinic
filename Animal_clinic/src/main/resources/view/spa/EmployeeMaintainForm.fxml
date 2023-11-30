@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.spa.EmployeeMaintainController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="425.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/image/doc1.jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="0.49" specularConstant="0.0" specularExponent="21.95" surfaceScale="2.84">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="189.88" elevation="49.39" />
+               </light>
+<!--               <light>-->
+<!--                  <Light.Distant />-->
+<!--               </light>-->
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="87.0" opacity="0.98" text="ID : " textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="132.0" layoutY="85.0" onAction="#txtSearchOnAction" onKeyReleased="#textFieldsKeyReleasesd" opacity="0.98" prefHeight="30.0" prefWidth="242.0" style="-fx-background-radius: 8;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="132.0" layoutY="137.0" onKeyReleased="#textFieldsKeyReleasesd" opacity="0.98" prefHeight="30.0" prefWidth="242.0" style="-fx-background-radius: 8;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" layoutX="132.0" layoutY="191.0" onKeyReleased="#textFieldsKeyReleasesd" opacity="0.98" prefHeight="30.0" prefWidth="242.0" style="-fx-background-radius: 8;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="133.0" layoutY="294.0" onKeyReleased="#textFieldsKeyReleasesd" opacity="0.98" prefHeight="30.0" prefWidth="242.0" style="-fx-background-radius: 8;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPhone" layoutX="132.0" layoutY="343.0" onKeyReleased="#textFieldsKeyReleasesd" opacity="0.98" prefHeight="30.0" prefWidth="242.0" style="-fx-background-radius: 8;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnSaveOnAction" opacity="0.98" prefHeight="35.0" prefWidth="89.0" styleClass="btnSave" stylesheets="@../assets/css/mainStyle.css" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="165.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" opacity="0.98" prefHeight="35.0" prefWidth="89.0" styleClass="btnUpdate" stylesheets="@../assets/css/mainStyle.css" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="271.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" opacity="0.98" prefHeight="35.0" prefWidth="89.0" styleClass="btnDelete" stylesheets="@../assets/css/mainStyle.css" text="Delete">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="112.0" layoutY="24.0" opacity="0.98" text="Customer Maintain" textFill="#e48eec">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="95.0" layoutY="53.0" prefHeight="8.0" prefWidth="242.0" />
+      <Label layoutX="46.0" layoutY="136.0" opacity="0.98" text="Name : " textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="193.0" opacity="0.98" text="Address : " textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="246.0" opacity="0.98" text="Age : " textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbAge" layoutX="137.0" layoutY="244.0" prefHeight="31.0" prefWidth="83.0" />
+      <Label layoutX="44.0" layoutY="296.0" opacity="0.98" text="Email : " textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="390.0" opacity="0.98" text="Salary" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="343.0" opacity="0.98" text="Contact : " textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSalary" layoutX="132.0" layoutY="389.0" onKeyReleased="#textFieldsKeyReleasesd" opacity="0.98" prefHeight="30.0" prefWidth="242.0" style="-fx-background-radius: 8;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+   <effect>
+      <Blend mode="BLUE" />
+   </effect>
+</AnchorPane>
