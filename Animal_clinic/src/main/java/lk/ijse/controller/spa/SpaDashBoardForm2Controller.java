@@ -7,10 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import lk.ijse.model.AnimalModel;
-import lk.ijse.model.Appointment;
-import lk.ijse.model.CustomerModel;
-import lk.ijse.model.DoctorMaintain;
+import lk.ijse.model.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -33,8 +30,8 @@ public class SpaDashBoardForm2Controller {
         CustomerModel customerModel = new CustomerModel();
         int count = customerModel.getCount();
 
-//        new Emp();
-//        int count1 = doctorMaintain.getCount();  //employee table eka hadanna one
+        EmployeeModel employeeModel = new EmployeeModel();
+        int count1 = employeeModel.getCount();
 
         AnimalModel animalModel = new AnimalModel();
         int count2 = animalModel.getCount();  // masaj table eken ganna one
@@ -42,7 +39,7 @@ public class SpaDashBoardForm2Controller {
         Appointment appointment = new Appointment();
         int count3 = appointment.getCount();
 
-//        lblEmployeeCount.setText("0"+count1);
+        lblEmployeeCount.setText("0"+count1);
         lblCustomerCount.setText("0"+count);
         lblAnimalServiceCount.setText("0"+count2);
         lblAppoinmentCount.setText("0"+count3);

@@ -35,9 +35,15 @@ public class MainSpaDashboardForm {
 
 
     public void btnAppoinmentOnAction(ActionEvent actionEvent) {
+        setUi("SpaAppointmentForm");
     }
 
-    public void logOutOnAction(MouseEvent mouseEvent) {
+    public void logOutOnAction(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"))));
+        stage.show();
+        Stage window = (Stage) mainPage.getScene().getWindow();
+        window.close();
     }
 
     public void txtSearchOnAction(InputMethodEvent inputMethodEvent) {
@@ -63,6 +69,7 @@ public class MainSpaDashboardForm {
     }
 
     public void btncompleteAppoOnAction(ActionEvent actionEvent) {
+        setUi("CompleteSpaAppointmentForm");
     }
 
     public void btnEmployeeOnAction(ActionEvent actionEvent) {

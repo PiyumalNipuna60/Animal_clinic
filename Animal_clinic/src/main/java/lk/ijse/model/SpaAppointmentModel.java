@@ -2,6 +2,7 @@ package lk.ijse.model;
 
 import lk.ijse.db.DBConnection;
 import lk.ijse.dto.SpaAppointmentDTO;
+import lk.ijse.dto.tm.SpaAppointmentTM;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -129,6 +130,33 @@ public class SpaAppointmentModel {
             }
 
             return count;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ArrayList<SpaAppointmentTM> getAllAppintment() {
+        try {
+            Connection connection=DBConnection.getInstance().getConnection();
+            PreparedStatement pstm=connection.prepareStatement("select SpaAppointment.*,customer.name from SpaAppointment inner join customer on customer.id=SpaAppointment.customerId");
+
+            ResultSet resultSet=pstm.executeQuery();
+            ArrayList<SpaAppointmentTM> object=new ArrayList<>();
+
+            while (resultSet.next()){
+                object.add(
+                        new SpaAppointmentTM(
+                                resultSet.getString(1),
+                                resultSet.getInt(2),
+                                resultSet.getString(3),
+                                resultSet.getString(4),
+                                resultSet.getString(5),
+                                resultSet.getString(8),
+                                resultSet.getString(6),
+                                resultSet.getString(7))
+                );
+            }
+            return object;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

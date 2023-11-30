@@ -2,6 +2,9 @@ package lk.ijse.model;
 
 import lk.ijse.db.DBConnection;
 import lk.ijse.dto.AppointmentDTO;
+import lk.ijse.dto.SpaAppointmentDTO;
+import lk.ijse.dto.tm.AppointmentTm;
+import lk.ijse.dto.tm.SpaAppointmentTM;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -140,4 +140,16 @@ public class AnimalModel {
             throw new RuntimeException(e);
         }
     }
+
+    public ResultSet getAnimalId() {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement pstm = connection.prepareStatement("select * from Animal;");
+            ResultSet rst = pstm.executeQuery();
+
+            return rst;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
