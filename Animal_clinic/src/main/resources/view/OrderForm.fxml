@@ -6,13 +6,14 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="679.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.OrderFormController">
+<AnchorPane prefHeight="679.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.OrderFormController">
    <children>
       <AnchorPane prefHeight="441.0" prefWidth="742.0">
          <children>
@@ -20,12 +21,6 @@
                <children>
                   <Pane layoutY="7.0" prefHeight="56.0" prefWidth="1078.0">
                      <children>
-                        <TextField layoutX="633.0" layoutY="19.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="175.0" promptText="Serach" />
-                        <ImageView fitHeight="18.0" fitWidth="45.0" layoutX="495.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/images%20(1).png" />
-                           </image>
-                        </ImageView>
                         <Label layoutX="37.0" layoutY="14.0" text="Order Form" textFill="#961c7a">
                            <font>
                               <Font name="System Bold" size="24.0" />
@@ -43,11 +38,39 @@
                         <TableColumn fx:id="colCustomerID" prefWidth="178.39990234375" text="CustomerID" />
                      </columns>
                   </TableView>
-                  <Button layoutX="888.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Add">
+                  <TextField fx:id="txtSearch" layoutX="748.0" layoutY="16.0" prefHeight="30.0" prefWidth="206.0" promptText="Search" style="-fx-background-radius: 15;">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#4ca3e1" />
+                     </effect>
+                  </TextField>
+                  <Button layoutX="951.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="18.0" prefWidth="90.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.5" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="965.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/image/mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1011.0" layoutY="15.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/image/notification.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblDate" layoutX="334.0" layoutY="25.0" prefHeight="34.0" prefWidth="95.0" text="fgvfdg" textFill="#d00d14">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="439.0" layoutY="26.0" prefHeight="34.0" prefWidth="102.0" text="fgvfdg" textFill="#d00d14">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children>
