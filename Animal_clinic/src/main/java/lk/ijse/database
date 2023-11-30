@@ -163,3 +163,30 @@ create table Schedule(
 );
 
 desc Schedule;
+
+create table Employee(
+                         id varchar(10) primary key ,
+                         name varchar(20),
+                         address text,
+                         age varchar(10),
+                         email text,
+                         contact varchar(10),
+                         salary varchar(10)
+);
+
+desc Employee;
+
+create table SpaSchedule(
+                         id varchar(10) primary key ,
+                         type varchar(20),
+                         time varchar(20),
+                         date varchar(10),
+                         EmployeeId varchar(10),
+                         AnimalId varchar(10),
+                         price varchar(10),
+                         status varchar(10),
+                         constraint foreign key (EmployeeId) references Employee(id) on delete cascade on update cascade,
+                         constraint foreign key (AnimalId) references Animal(id) on delete cascade on update cascade
+);
+
+desc SpaSchedule;

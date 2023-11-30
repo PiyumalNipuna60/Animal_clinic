@@ -80,7 +80,7 @@ public class AdminDashboardForm implements Initializable {
 
     public void btnSPAOnAction2(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/SpaDashboardForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/spa/MainSpaDashboardForm.fxml"))));
         stage.show();
         Stage window = (Stage) mainPane.getScene().getWindow();
         window.close();

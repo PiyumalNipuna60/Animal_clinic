@@ -1,19 +1,23 @@
 package lk.ijse.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.model.ItemModel;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -29,6 +33,8 @@ public class ItemFormController {
     public TableView tblItem;
 
     public static ItemFormController itemFormController;
+    public Label lblDate;
+    public Label lblTime;
 
     public void initialize(){
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -36,8 +42,18 @@ public class ItemFormController {
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
         colCount.setCellValueFactory(new PropertyValueFactory<>("count"));
         loadData();
-
+        generateRealTime();
         itemFormController=this;
+    }
+
+    private void generateRealTime() {
+        lblDate.setText(LocalDate.now().toString());
+        Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
+            lblTime.setText(LocalDateTime.now().format(formatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
     }
     public void loadData(){
         ItemModel item=new ItemModel();
@@ -68,4 +84,7 @@ public class ItemFormController {
         stage.show();
     }
 
+    public void searchOnAction(ActionEvent actionEvent) {
+
+    }
 }
