@@ -1,5 +1,8 @@
 package lk.ijse.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -7,10 +10,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import lk.ijse.dto.OrderDTO;
 import lk.ijse.model.Order;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -26,6 +33,8 @@ public class OrderFormController {
     public TableColumn colCustomerID;
     public ComboBox <String> txtCustomerID;
     public TableView tblOrder;
+    public Label lblDate;
+    public Label lblTime;
 
     public void initialize(){
         colID.setCellFactory(new PropertyValueFactory<>("id"));
@@ -41,6 +50,16 @@ public class OrderFormController {
         ArrayList<OrderDTO> all=Order.getAll();
 
         tblOrder.setItems(FXCollections.observableArrayList(all));
+    }
+
+    private void generateRealTime() {
+        lblDate.setText(LocalDate.now().toString());
+        Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
+            lblTime.setText(LocalDateTime.now().format(formatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
