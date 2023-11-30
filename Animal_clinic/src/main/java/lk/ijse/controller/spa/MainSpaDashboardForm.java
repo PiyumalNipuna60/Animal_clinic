@@ -24,6 +24,12 @@ public class MainSpaDashboardForm {
     }
 
     public void btnCustomerOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane load = FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"));
+            secondPane.getChildren().setAll(load);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
@@ -54,16 +60,21 @@ public class MainSpaDashboardForm {
         stage.show();
         Stage window = (Stage) mainPage.getScene().getWindow();
         window.close();
-        //test
-        
     }
 
     public void btncompleteAppoOnAction(ActionEvent actionEvent) {
     }
 
     public void btnEmployeeOnAction(ActionEvent actionEvent) {
+        setUi("EmployeeForm");
     }
 
     public void btnAnimalOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane load = FXMLLoader.load(getClass().getResource("/view/AnimalForm.fxml"));
+            secondPane.getChildren().setAll(load);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

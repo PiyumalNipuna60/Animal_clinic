@@ -24,9 +24,6 @@
                <bumpInput>
                   <Shadow />
                </bumpInput>
-               <light>
-                  <Light.Distant azimuth="189.88" elevation="49.39" />
-               </light>
 <!--               <light>-->
 <!--                  <Light.Distant />-->
 <!--               </light>-->

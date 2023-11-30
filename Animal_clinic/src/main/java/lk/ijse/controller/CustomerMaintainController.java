@@ -75,7 +75,7 @@ public class CustomerMaintainController {
         int i = customer.customerSave(new CustomerDTO(id,name,address,email,phone,userId));
         if (i==1){
             new Alert(Alert.AlertType.CONFIRMATION,"Save Customer...").show();
-
+            CustomerFormController.customerFormController.loadData();
             clear();
         }else {
             new Alert(Alert.AlertType.ERROR,"Wrong Customer...").show();
