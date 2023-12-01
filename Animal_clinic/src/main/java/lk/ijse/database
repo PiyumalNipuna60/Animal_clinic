@@ -46,7 +46,6 @@ desc Doctor;
 
 create table Orders(
                        id varchar(10) primary key ,
-                       quantity_an_hand varchar(20),
                        date varchar(10),
                        total int,
                        customerId varchar(10),
@@ -60,7 +59,6 @@ create table Item(
                      description varchar(20),
                      price int,
                      count int
-
 );
 
 desc Item;
@@ -68,6 +66,8 @@ desc Item;
 create table Order_details(
                               orderId varchar(10),
                               itemId varchar(10),
+                              quantity_an_hand varchar(20),
+                              price varchar(20),
                               constraint foreign key (orderId) references Orders(id) on delete cascade on update cascade,
                               constraint foreign key (itemId) references Item(id) on delete cascade on update cascade
 );
@@ -199,7 +199,7 @@ create table SpaAppointment(
                             time varchar(10),
                             customerId varchar(10),
                             AnimalId varchar(10),
-                            status varchar(10),
+                            status varchar(15),
                             constraint foreign key (AnimalId) references Animal(id) on delete cascade on update cascade,
                             constraint foreign key (customerId) references Customer(id) on delete cascade on update cascade
 );

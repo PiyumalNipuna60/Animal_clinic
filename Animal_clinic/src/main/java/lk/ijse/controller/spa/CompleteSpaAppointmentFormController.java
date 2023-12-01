@@ -25,7 +25,7 @@ import java.util.Objects;
 
 public class CompleteSpaAppointmentFormController {
 
-    static CompleteSpaAppointmentFormController spaAppointmentFormController;
+    static CompleteSpaAppointmentFormController completeSpaAppointmentFormController;
     public Label lblDate;
     public Label lblTime;
     public TableColumn colStatus;
@@ -35,7 +35,7 @@ public class CompleteSpaAppointmentFormController {
     public TableColumn colPrice;
     public TableColumn colDate;
     public TableColumn colID;
-    public TableView tblAppoinments;
+    public TableView<SpaAppointmentDTO> tblAppoinments;
     public TextField txtSearch;
 
     public void initialize(){
@@ -47,7 +47,7 @@ public class CompleteSpaAppointmentFormController {
         colAnimalId.setCellValueFactory(new PropertyValueFactory<>("animalId"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        spaAppointmentFormController=this;
+        completeSpaAppointmentFormController=this;
         generateRealTime();
         loadData();
         generateRealTime();

@@ -7,9 +7,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Order {
+public class OrderModel {
     public static ArrayList<OrderDTO> getAll() {
         try {
             Connection connection=DBConnection.getInstance().getConnection();
@@ -23,15 +24,26 @@ public class Order {
                         new OrderDTO(
                                 resultSet.getString(1),
                                 resultSet.getString(2),
-                                resultSet.getString(3),
-                                resultSet.getInt(4),
-                                resultSet.getString(5)));
+                                resultSet.getInt(3),
+                                resultSet.getString(4)));
             }
             return object;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
+    public static boolean saveOrder(String oId, String cusId, LocalDate now, double total) throws SQLException {
+           Connection connection=DBConnection.getInstance().getConnection();
+            PreparedStatement pstm = connection.prepareStatement("insert into orders values (?,?,?,?)");
+            pstm.setObject(1,oId);
+            pstm.setObject(2,now);
+            pstm.setObject(3,total);
+            pstm.setObject(4,cusId);
+
+        return pstm.executeUpdate() > 0;
+    }
+
 
     public int deleteOrder(String id) {
         try {
@@ -50,12 +62,11 @@ public class Order {
     public int updateOrder(OrderDTO orderDTO) {
         try {
             Connection connection=DBConnection.getInstance().getConnection();
-            PreparedStatement pstm= connection.prepareStatement("update orders set quantityAndHand=?,date=?,total=?,customerID=? where id=?");
+            PreparedStatement pstm= connection.prepareStatement("update orders set date=?,total=?,customerID=? where id=?");
             pstm.setObject(1,orderDTO.getId());
-            pstm.setObject(2,orderDTO.getQuantityAndHand());
-            pstm.setObject(3,orderDTO.getDate());
-            pstm.setObject(4,orderDTO.getTotal());
-            pstm.setObject(5,orderDTO.getCustomerId());
+            pstm.setObject(2,orderDTO.getDate());
+            pstm.setObject(3,orderDTO.getTotal());
+            pstm.setObject(4,orderDTO.getCustomerId());
 
             int i = pstm.executeUpdate();
             return i;
@@ -64,23 +75,27 @@ public class Order {
         }
     }
 
-    public int saveOrder(OrderDTO orderDTO) {
-        try {
-            Connection connection=DBConnection.getInstance().getConnection();
-            PreparedStatement pstm = connection.prepareStatement("insert into orders values (?,?,?,?,?)");
-            pstm.setObject(1,orderDTO.getId());
-            pstm.setObject(2,orderDTO.getQuantityAndHand());
-            pstm.setObject(3,orderDTO.getDate());
-            pstm.setObject(4,orderDTO.getTotal());
-            pstm.setObject(5,orderDTO.getCustomerId());
+    public static String getNextOrderId() throws SQLException {
+        Connection con = DBConnection.getInstance().getConnection();
+        String sql = "SELECT id FROM Orders ORDER BY id DESC LIMIT 1";
+        ResultSet resultSet = con.createStatement().executeQuery(sql);
 
-            int i =pstm.executeUpdate();
-            return i;
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        if (resultSet.next()) {
+            return splitOrderId(resultSet.getString(1));
         }
+        return splitOrderId(null);
     }
+
+    private static String splitOrderId(String currentId) {
+        if(currentId != null) {
+            String[] strings = currentId.split("O0");
+            int id = Integer.parseInt(strings[1]);
+            id++;
+            return "O0" + id;
+        }
+        return "O001";
+    }
+
 
     public OrderDTO searchOrder(String id) {
         try {
@@ -95,9 +110,8 @@ public class Order {
                 orderDTO = new OrderDTO(
                         resultSet.getString(1),
                         resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getInt(4),
-                        resultSet.getString(5));
+                        resultSet.getInt(3),
+                        resultSet.getString(4));
 
             }
             return orderDTO;

@@ -85,8 +85,8 @@ public class SpaAppointmentMaintainController {
         int i = spaAppointmentModel.appointmentSave(new SpaAppointmentDTO(id, price, date, time, customerID,animalId,status));
         if (i == 1) {
             new Alert(Alert.AlertType.CONFIRMATION, "Save Appointment...").show();
-            SpaAppointmentFormController.appointmentFormController.loadData();
-            CompleteSpaAppointmentFormController.spaAppointmentFormController.loadData();
+                SpaAppointmentFormController.appointmentFormController.loadData();
+                CompleteSpaAppointmentFormController.completeSpaAppointmentFormController.loadData();
             clear();
         } else {
             new Alert(Alert.AlertType.ERROR, "Wrong Appointment...").show();
@@ -107,7 +107,7 @@ public class SpaAppointmentMaintainController {
         if (i == 1) {
             new Alert(Alert.AlertType.CONFIRMATION, "Update Animal...").show();
             SpaAppointmentFormController.appointmentFormController.loadData();
-            CompleteSpaAppointmentFormController.spaAppointmentFormController.loadData();
+            CompleteSpaAppointmentFormController.completeSpaAppointmentFormController.loadData();
             clear();
         } else {
             new Alert(Alert.AlertType.ERROR, "Something wrong...").show();
@@ -121,7 +121,7 @@ public class SpaAppointmentMaintainController {
         if (i == 1) {
             new Alert(Alert.AlertType.CONFIRMATION, "Delete Appointment....");
             SpaAppointmentFormController.appointmentFormController.loadData();
-            CompleteSpaAppointmentFormController.spaAppointmentFormController.loadData();
+            CompleteSpaAppointmentFormController.completeSpaAppointmentFormController.loadData();
             clear();
         } else {
             new Alert(Alert.AlertType.ERROR, "Something Wrong...");
@@ -133,7 +133,8 @@ public class SpaAppointmentMaintainController {
         txtPrice.clear();
         txtDate.setValue(LocalDate.parse(LocalDate.now().toString()));
         txtTime.clear();
-        cmbCustomerId.setValue("Select Id");
+        cmbAnimalId.getSelectionModel().clearSelection();
+        cmbCustomerId.getSelectionModel().clearSelection();
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
