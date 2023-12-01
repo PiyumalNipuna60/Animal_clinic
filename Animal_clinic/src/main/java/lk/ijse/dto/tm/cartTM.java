@@ -1,18 +1,16 @@
-package lk.ijse.dto;
+package lk.ijse.dto.tm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 @ToString
-public class OrderDTO {
+public class cartTM {
     private String id;
-    private String date;
-    private int total;
-    private String customerId;
-
+    private int qty;
+    private double total;
 }

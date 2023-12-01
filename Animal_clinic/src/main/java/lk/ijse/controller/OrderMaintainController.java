@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.OrderDTO;
-import lk.ijse.model.Order;
+import lk.ijse.model.OrderModel;
 
 public class OrderMaintainController {
     public TextField txtQuantityAndHand;
@@ -24,14 +24,7 @@ public class OrderMaintainController {
         int total=Integer.parseInt(txtTotal.getText()) ;
         String customerID = txtCustomerID.getValue();
 
-        Order order=new Order();
-        int i = order.saveOrder(new OrderDTO(id,quantityAndHand,date,total,customerID));
-        if (i==1){
-            new Alert(Alert.AlertType.CONFIRMATION,"Save Animal...").show();
-            clear();
-        }else {
-            new Alert(Alert.AlertType.ERROR,"Wrong Animal...").show();
-        }
+        OrderModel order=new OrderModel();
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
@@ -41,8 +34,8 @@ public class OrderMaintainController {
         int total=Integer.parseInt(txtTotal.getText()) ;
         String customerID = txtCustomerID.getValue();
 
-        Order order=new Order();
-        int i = order.updateOrder(new OrderDTO(id,quantityAndHand,date,total,customerID));
+        OrderModel order=new OrderModel();
+        int i = order.updateOrder(new OrderDTO(id,date,total,customerID));
 
         if (i==1){
             new Alert(Alert.AlertType.CONFIRMATION,"Update Order...").show();
@@ -54,7 +47,7 @@ public class OrderMaintainController {
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
         String id= txtID.getText();
-        Order order=new Order();
+        OrderModel order=new OrderModel();
         int i = order.deleteOrder(id);
         if (i==1){
             new Alert(Alert.AlertType.CONFIRMATION,"Delete Order....");

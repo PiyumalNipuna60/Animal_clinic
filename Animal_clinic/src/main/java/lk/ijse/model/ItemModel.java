@@ -2,12 +2,14 @@ package lk.ijse.model;
 
 import lk.ijse.db.DBConnection;
 import lk.ijse.dto.ItemDTO;
+import lk.ijse.dto.tm.cartTM;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ItemModel {
     public static ArrayList<ItemDTO> getAll() {
@@ -112,5 +114,36 @@ public class ItemModel {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ResultSet getItemId() {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement pstm = connection.prepareStatement("select * from Item");
+            ResultSet resultSet = pstm.executeQuery();
+            return resultSet;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static boolean updateQty(List<cartTM> cartDTOList) throws SQLException {
+        for(cartTM dto : cartDTOList) {
+            if(!updateQty(dto)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean updateQty(cartTM dto) throws SQLException {
+        Connection con = DBConnection.getInstance().getConnection();
+
+        String sql = "UPDATE Item SET count = (count - ?) WHERE id = ?";
+        PreparedStatement pstm = con.prepareStatement(sql);
+        pstm.setInt(1, dto.getQty());
+        pstm.setString(2, dto.getId());
+
+        return pstm.executeUpdate() > 0;
     }
 }
