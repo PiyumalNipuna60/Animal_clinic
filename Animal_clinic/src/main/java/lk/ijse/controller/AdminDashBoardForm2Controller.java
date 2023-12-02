@@ -66,4 +66,8 @@ public class AdminDashBoardForm2Controller {
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
+
+    public void emailOnAction(ActionEvent actionEvent) {
+
+    }
 }
