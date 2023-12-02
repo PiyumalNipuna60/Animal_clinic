@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="691.0" prefWidth="1387.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardForm">
+<AnchorPane fx:id="mainPane" prefHeight="691.0" prefWidth="1387.0" style="-fx-background-color: -fx-border-color:#F0FFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardForm">
    <children>
       <Pane layoutY="-1.0" prefHeight="692.0" prefWidth="210.0" style="-fx-background-color: D092DA; -fx-background-radius: 0 15 15 0;">
          <children>
@@ -153,6 +153,6 @@
             <Image url="@assets/image/Vector.png" />
          </image>
       </ImageView>
-      <Pane fx:id="secondPane" layoutX="219.0" layoutY="-9.0" prefHeight="679.0" prefWidth="1081.0" styleClass=".lblMainName" stylesheets="@css/mainStyle.css" />
+      <Pane fx:id="secondPane" layoutX="213.0" layoutY="6.0" prefHeight="679.0" prefWidth="1081.0" style="-fx-background-color: rgba(215, 255, 255, 0.5); -fx-border-radius: 10; -fx-background-radius: 10;" styleClass="pane" stylesheets="@assets/css/mainStyle.css" />
    </children>
 </AnchorPane>

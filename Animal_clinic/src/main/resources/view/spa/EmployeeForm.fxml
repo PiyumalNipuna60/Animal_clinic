@@ -17,7 +17,7 @@
    <children>
       <Pane layoutX="-4.0" layoutY="1.0" prefHeight="679.0" prefWidth="1088.0">
          <children>
-            <Label layoutX="32.0" layoutY="14.0" text="Customer Form" textFill="#961c7a">
+            <Label layoutX="32.0" layoutY="14.0" text="Employee Form" textFill="#961c7a">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -32,13 +32,13 @@
             </TextField>
             <TableView fx:id="tblEmployee" layoutX="32.0" layoutY="109.0" prefHeight="556.0" prefWidth="1040.0">
               <columns>
-                <TableColumn fx:id="colId" prefWidth="86.39995956420898" text="ID" />
-                <TableColumn fx:id="colName" prefWidth="133.0" text="Name" />
-                  <TableColumn fx:id="colAddress" prefWidth="153.0" text="Address" />
-                  <TableColumn fx:id="colEmail" prefWidth="199.0" text="Email" />
-                  <TableColumn fx:id="colPhone" prefWidth="150.0" text="contactNo" />
-                  <TableColumn fx:id="colAge" prefWidth="171.0" text="Age" />
-                  <TableColumn fx:id="colSalary" prefWidth="146.0" text="Salary" />
+                <TableColumn fx:id="colId" prefWidth="86.39995956420898" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 10px 0px 0px 10px;" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="133.0" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 0px 0px 0px 0px;" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="153.0" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 0px 0px 0px 0px;" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="199.0" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 0px 0px 0px 0px;" text="Email" />
+                  <TableColumn fx:id="colPhone" prefWidth="150.0" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 0px 0px 0px 0px;" text="contactNo" />
+                  <TableColumn fx:id="colAge" prefWidth="171.0" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 0px 0px 0px 0px;" text="Age" />
+                  <TableColumn fx:id="colSalary" prefWidth="146.0" style="-fx-background-color: radial-gradient(radius 100%, burlywood, derive(burlywood, 30%), derive(burlywood, 10%)); -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px; -fx-background-radius: 0px 10px 10px 0px;" text="Salary" />
               </columns>
             </TableView>
             <Separator layoutX="24.0" layoutY="46.0" prefHeight="10.0" prefWidth="519.0" />

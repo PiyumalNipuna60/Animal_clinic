@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="679.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
+<AnchorPane prefHeight="679.0" prefWidth="1081.0" style="-fx-background-color: rgba(255, 215, 255, 0.5);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
    <children>
-      <Pane layoutX="-4.0" layoutY="1.0" prefHeight="679.0" prefWidth="1088.0">
+      <Pane layoutX="-4.0" layoutY="1.0" prefHeight="679.0" prefWidth="1088.0" style="-fx-background-color: rgba(215, 255, 255, 0.5);">
          <children>
             <Label layoutX="32.0" layoutY="14.0" text="Customer Form" textFill="#961c7a">
                <font>
@@ -30,14 +30,14 @@
                   <InnerShadow color="#4ca3e1" />
                </effect>
             </TextField>
-            <TableView fx:id="tblCustomer" layoutX="32.0" layoutY="109.0" prefHeight="556.0" prefWidth="1040.0">
+            <TableView fx:id="tblCustomer" layoutX="32.0" layoutY="109.0" prefHeight="556.0" prefWidth="1040.0" stylesheets="@assets/css/mainStyle.css">
               <columns>
-                <TableColumn fx:id="colId" prefWidth="86.39995956420898" text="ID" />
-                <TableColumn fx:id="colName" prefWidth="140.0000457763672" text="Name" />
-                  <TableColumn fx:id="colAddress" prefWidth="208.79998779296875" text="Address" />
-                  <TableColumn fx:id="colEmail" prefWidth="232.0" text="Email" />
-                  <TableColumn fx:id="colPhone" prefWidth="175.99993896484375" text="contactNo" />
-                  <TableColumn fx:id="colUserId" prefWidth="196.79986572265625" text="UserID" />
+                <TableColumn fx:id="colId" prefWidth="120.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 10px 0px 0px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0px 3px 5px;" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="171.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="177.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="239.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Email" />
+                  <TableColumn fx:id="colPhone" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="contactNo" />
+                  <TableColumn fx:id="colUserId" prefWidth="168.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 10px 10px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  5px 3px 0px;" text="UserID" />
               </columns>
             </TableView>
             <Separator layoutX="24.0" layoutY="46.0" prefHeight="10.0" prefWidth="519.0" />

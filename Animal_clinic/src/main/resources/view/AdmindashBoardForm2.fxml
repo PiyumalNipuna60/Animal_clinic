@@ -135,6 +135,6 @@
             <Image url="@assets/image/notification.png" />
          </image>
       </ImageView>
-      <Button layoutX="989.0" layoutY="18.0" mnemonicParsing="false" onAction="#emailOnAction" prefHeight="41.0" prefWidth="35.0" styleClass="btn2" stylesheets="@assets/css/mainStyle.css" />
+      <Button layoutX="987.0" layoutY="18.0" mnemonicParsing="false" onAction="#emailOnAction" prefHeight="41.0" prefWidth="35.0" styleClass="btn2" stylesheets="@assets/css/mainStyle.css" />
    </children>
 </AnchorPane>

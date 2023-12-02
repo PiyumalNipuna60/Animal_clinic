@@ -1,13 +1,13 @@
 package lk.ijse.model;
 
 import lk.ijse.db.DBConnection;
-import lk.ijse.dto.AnimalDTO;
 import lk.ijse.dto.InjectionDTO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class InjectionModel {
@@ -164,5 +164,15 @@ public class InjectionModel {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ResultSet serchANDSendMail() throws SQLException {
+        LocalDate futureDate = LocalDate.now().plusMonths(1);
+        Connection connection= DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement("select Customer.name,Customer.email,Animal.name,Animal.categories,injection.end_date from Customer inner join Animal on Customer.id=Animal.customerId inner join injection on Animal.id=injection.animalId where injection.end_date=? group by Animal.id");
+        pstm.setObject(1, futureDate);
+
+        ResultSet resultSet = pstm.executeQuery();
+        return resultSet;
     }
 }

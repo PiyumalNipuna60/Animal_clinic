@@ -31,10 +31,10 @@
                   </Pane>
                   <TableView fx:id="tabSupplier" layoutX="27.0" layoutY="109.0" prefHeight="575.0" prefWidth="1039.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="164.800048828125" text="ID" />
-                        <TableColumn fx:id="colName" prefWidth="271.199951171875" text="Name" />
-                        <TableColumn fx:id="colEmail" prefWidth="332.0" text="Email" />
-                        <TableColumn fx:id="colPhone" prefWidth="271.19989013671875" text="Phone" />
+                        <TableColumn fx:id="colID" prefWidth="164.800048828125" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%); -fx-background-radius: 10px 0px 0px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0px 3px 5px;" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="271.199951171875" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Name" />
+                        <TableColumn fx:id="colEmail" prefWidth="332.0" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Email" />
+                        <TableColumn fx:id="colPhone" prefWidth="271.19989013671875" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 10px 10px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  5px 3px 0px;" text="Phone" />
                      </columns>
                   </TableView>
                   <TextField layoutX="760.0" layoutY="19.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="206.0" promptText="Search" style="-fx-background-radius: 15;">
