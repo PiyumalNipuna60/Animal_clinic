@@ -15,11 +15,11 @@
 
 <AnchorPane fx:id="mainPage" prefHeight="691.0" prefWidth="1387.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.spa.MainSpaDashboardForm">
    <children>
-      <Pane prefHeight="692.0" prefWidth="81.0" style="-fx-background-color: D092DA; -fx-background-radius: 0 15 15 0;">
+      <Pane prefHeight="692.0" prefWidth="81.0" style="-fx-background-color: rgba(208, 146, 218 ,0.8); -fx-background-radius: 0 15 15 0;">
          <children>
             <ImageView id="btn" fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" styleClass="assets\css\mainStyle.css">
                <image>
-                  <Image url="@../assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@../assets/image/icon/home.png" />
                </image>
             </ImageView>
             <Button layoutX="20.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnAdminDashBoard" prefHeight="40.0" prefWidth="40.0" styleClass="btn2" stylesheets="@../assets/css/mainStyle.css" />
@@ -32,7 +32,7 @@
       <Button layoutX="18.0" layoutY="524.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="btn2" stylesheets="@../assets/css/mainStyle.css" text="Button" />
       <Button layoutX="18.0" layoutY="577.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="btn2" stylesheets="@../assets/css/mainStyle.css" text="Button" />
       <Separator layoutX="15.0" layoutY="157.0" prefHeight="2.0" prefWidth="50.0" />
-      <Pane fx:id="secondPane" layoutX="95.0" layoutY="9.0" prefHeight="679.0" prefWidth="1081.0" styleClass=".lblMainName" stylesheets="@view/css/mainStyle.css" />
+      <Pane fx:id="secondPane" layoutX="95.0" layoutY="9.0" prefHeight="679.0" prefWidth="1081.0" style="-fx-background-color: rgba(215, 215, 255, 0.5);" styleClass=".lblMainName" stylesheets="@view/css/mainStyle.css" />
       <Pane layoutX="1188.0" prefHeight="692.0" prefWidth="210.0" style="-fx-background-color: D092DA; -fx-background-radius: 0 15 15 0;">
          <children>
             <ImageView fitHeight="68.0" fitWidth="65.0" layoutX="76.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
@@ -95,37 +95,37 @@
       </Pane>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/review.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/paw.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/stethoscope.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/box-open-full.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="385.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/calendar-clock.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/life-ring.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="580.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/image/images_1_-removebg-preview.png" />
+            <Image url="@../assets/image/icon/exit.png" />
          </image>
       </ImageView>
       <Separator layoutX="13.0" layoutY="506.0" prefHeight="2.0" prefWidth="50.0" />
