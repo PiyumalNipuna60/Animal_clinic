@@ -79,11 +79,8 @@ public class AnimalFormController {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/test.fxml"));
 
-            TestController cusromerRowFormController = new TestController();
-            fxmlLoader.setController(cusromerRowFormController);
             TestController customerRowFormController = new TestController();
             fxmlLoader.setController(customerRowFormController);
-
 
             Node node = fxmlLoader.load();
 
@@ -110,8 +107,14 @@ public class AnimalFormController {
     private void setVBoxAndAction(VBox vbox, Node node, TestController controller) {
         Button btnSelect = controller.getBtnSelect();
         btnSelect.setOnAction(actionEvent -> {
-            System.out.println(controller.getTxtName());
-            System.out.println(controller.getTxtDescription());
+            Stage stage = new Stage();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/AnimalPopUpForm.fxml")))));
+                AnimalPopUpFormController.animalPopUpFormController.setID(controller.getTxtName(),controller.getTxtDescription());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.show();
         });
         VBox vBox1 = new VBox(node);
         vbox.getChildren().add(vBox1);

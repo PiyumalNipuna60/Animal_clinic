@@ -9,6 +9,11 @@ public class DBConnection {
     private static DBConnection dbConnection;
 
     public DBConnection() throws SQLException {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/AnimalClinic","root","1234");
     }
     public static DBConnection getInstance() throws SQLException {

@@ -49,6 +49,17 @@ public class AnimalModel {
 
     }
 
+    public static ResultSet getAnimalDetails(String animalName, String txtDescription) throws SQLException {
+        Connection connection= DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement("select Animal.*,Customer.name from Customer inner join Animal on Customer.id=Animal.customerId where Animal.name=? && Animal.customerId=?");
+        pstm.setObject(1, animalName);
+        pstm.setObject(2, txtDescription);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        return resultSet;
+    }
+
     public AnimalDTO searchAnimal(String id) {
         try {
             Connection connection= DBConnection.getInstance().getConnection();
@@ -96,7 +107,7 @@ public class AnimalModel {
     public int updateAnimal(AnimalDTO animalDTO) {
         try {
             Connection connection=DBConnection.getInstance().getConnection();
-            PreparedStatement pstm= connection.prepareStatement("update Animal set name=?,age=?,categories=?, image=? customerID=? where id=?");
+            PreparedStatement pstm= connection.prepareStatement("update Animal set name=?,age=?,categories=?, image=?, customerID=? where id=?");
             pstm.setObject(1,animalDTO.getName());
             pstm.setObject(2,animalDTO.getAge());
             pstm.setObject(3,animalDTO.getType());
