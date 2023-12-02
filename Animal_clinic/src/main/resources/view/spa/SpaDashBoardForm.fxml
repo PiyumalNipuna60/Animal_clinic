@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="679.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.spa.SpaDashBoardForm2Controller">
+<AnchorPane prefHeight="679.0" prefWidth="1081.0" style="-fx-background-color: rgba(215, 215, 255, 0.5);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.spa.SpaDashBoardForm2Controller">
    <children>
       <Pane fx:id="secondPane" layoutX="3.0" layoutY="2.0" prefHeight="679.0" prefWidth="1081.0" styleClass=".lblMainName" stylesheets="@css/mainStyle.css">
          <children>

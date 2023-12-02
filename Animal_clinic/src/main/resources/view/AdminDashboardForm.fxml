@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="691.0" prefWidth="1387.0" style="-fx-background-color: -fx-border-color:#F0FFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardForm">
+<AnchorPane fx:id="mainPane" prefHeight="691.0" prefWidth="1387.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardForm">
    <children>
       <Pane layoutY="-1.0" prefHeight="692.0" prefWidth="210.0" style="-fx-background-color: D092DA; -fx-background-radius: 0 15 15 0;">
          <children>
@@ -81,7 +81,7 @@
             </Separator>
             <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="154.0" layoutY="637.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/logOut.png" />
+                  <Image url="@assets/image/icon/exit.png" />
                </image>
             </ImageView>
             <Button layoutX="151.0" layoutY="637.0" mnemonicParsing="false" onAction="#logOutOnAction" prefHeight="32.0" prefWidth="40.0" styleClass="btn2" stylesheets="@assets/css/mainStyle.css" />
@@ -92,42 +92,42 @@
             <Separator layoutX="15.0" layoutY="150.0" prefHeight="2.0" prefWidth="50.0" />
             <ImageView id="btn" fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="29.0" onMouseClicked="#btnSPAOnAction" pickOnBounds="true" preserveRatio="true" styleClass="assets\css\mainStyle.css">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/home.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="163.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/review.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="216.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/apps-sort.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="269.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/paw.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="325.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/calendar-clock.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="23.0" layoutY="378.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/stethoscope.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="520.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/hand-holding-medical.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="41.0" layoutX="24.0" layoutY="573.0" onDragDetected="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/image/images_1_-removebg-preview.png" />
+                  <Image url="@assets/image/icon/exit.png" />
                </image>
             </ImageView>
             <Button layoutX="20.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnSPAOnAction2" prefHeight="40.0" prefWidth="40.0" styleClass="btn2" stylesheets="@assets/css/mainStyle.css">
@@ -153,6 +153,6 @@
             <Image url="@assets/image/Vector.png" />
          </image>
       </ImageView>
-      <Pane fx:id="secondPane" layoutX="213.0" layoutY="6.0" prefHeight="679.0" prefWidth="1081.0" style="-fx-background-color: rgba(215, 255, 255, 0.5); -fx-border-radius: 10; -fx-background-radius: 10;" styleClass="pane" stylesheets="@assets/css/mainStyle.css" />
+      <Pane fx:id="secondPane" layoutX="219.0" layoutY="-9.0" prefHeight="679.0" prefWidth="1081.0" styleClass=".lblMainName" stylesheets="@css/mainStyle.css" />
    </children>
 </AnchorPane>
