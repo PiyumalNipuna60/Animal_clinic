@@ -4,18 +4,19 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import lk.ijse.model.AnimalModel;
-import lk.ijse.model.Appointment;
-import lk.ijse.model.CustomerModel;
-import lk.ijse.model.DoctorMaintain;
+import lk.ijse.controller.mail.Mail;
+import lk.ijse.model.*;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -68,6 +69,26 @@ public class AdminDashBoardForm2Controller {
     }
 
     public void emailOnAction(ActionEvent actionEvent) {
+        try {
+            InjectionModel injectionModel = new InjectionModel();
+            ResultSet resultSet = injectionModel.serchANDSendMail();
+            while (resultSet.next()){
 
+                LocalDate futureDate = LocalDate.now().plusMonths(1);
+                String msg="Dear "+resultSet.getString(1)+",\n++++++++++++++++ \n * I would like to inform you that the next " +
+                        "injection date of your pet named '"+resultSet.getString(3)+"' is on "+futureDate+".";
+
+                Mail mail = new Mail(); //creating an instance of Mail class
+                mail.setMsg(msg);//email message
+                mail.setTo(resultSet.getString(2)); //receiver's mail
+                mail.setSubject("Your "+resultSet.getString(4)+" next injection Date..!"); //email subject
+
+                Thread thread = new Thread(mail);
+                thread.start();
+            }
+
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 }
