@@ -75,7 +75,7 @@ public class AdminDashBoardForm2Controller {
             while (resultSet.next()){
 
                 LocalDate futureDate = LocalDate.now().plusMonths(1);
-                String msg="Dear "+resultSet.getString(1)+",\n++++++++++++++++ \n * I would like to inform you that the next " +
+                String msg="Dear "+resultSet.getString(1)+",\n \n * I would like to inform you that the next " +
                         "injection date of your pet named '"+resultSet.getString(3)+"' is on "+futureDate+".";
 
                 Mail mail = new Mail(); //creating an instance of Mail class

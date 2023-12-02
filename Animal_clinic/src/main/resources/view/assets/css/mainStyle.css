@@ -110,7 +110,7 @@
 
 .btnSave:hover {
     -fx-background-color:
-            linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%),
+            linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%),
             #CDB5E5,
             #CDB5E5,
             radial-gradient(center 50% 50%, radius 100%, #B084FF, #B084FF);
@@ -172,5 +172,13 @@
 
 .pane{
 -fx-background-color: rgba(255, 255, 255, 0.7);
+}
+
+.table-view {
+    -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
 
 }
+

@@ -27,7 +27,7 @@ public class Mail implements Runnable {
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.smtp.host", "smtp.gmail.com");
-        properties.put("mail.smtp.port", 465);
+        properties.put("mail.smtp.port", "587");
         Session session = Session.getDefaultInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication("nipuna315np@gmail.com", "ptagenhccjueweol");  // have to change some settings in SMTP

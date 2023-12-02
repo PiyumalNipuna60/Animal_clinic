@@ -31,10 +31,10 @@
                   </Pane>
                   <TableView fx:id="tblItem" layoutX="15.0" layoutY="95.0" prefHeight="586.0" prefWidth="1051.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="142.3999900817871" text="ID" />
-                        <TableColumn fx:id="colDescription" prefWidth="324.00001525878906" text="Description" />
-                        <TableColumn fx:id="colPrice" prefWidth="322.39996337890625" text="Price" />
-                        <TableColumn fx:id="colCount" prefWidth="264.00006103515625" text="Count" />
+                        <TableColumn fx:id="colID" prefWidth="142.3999900817871" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 10px 0px 0px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0px 3px 5px;" text="ID" />
+                        <TableColumn fx:id="colDescription" prefWidth="324.00001525878906" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Description" />
+                        <TableColumn fx:id="colPrice" prefWidth="322.39996337890625" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Price" />
+                        <TableColumn fx:id="colCount" prefWidth="264.00006103515625" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 10px 10px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  5px 3px 0px;" text="Count" />
                      </columns>
                   </TableView>
                   <TextField fx:id="txtSearch" layoutX="756.0" layoutY="10.0" onAction="#searchOnAction" prefHeight="30.0" prefWidth="206.0" promptText="Search" style="-fx-background-radius: 15;">

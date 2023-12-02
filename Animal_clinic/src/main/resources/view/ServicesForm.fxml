@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="649.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ServicesFormController">
+<AnchorPane prefHeight="649.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ServicesFormController">
    <children>
       <AnchorPane prefHeight="441.0" prefWidth="742.0">
          <children>
@@ -21,9 +21,9 @@
                   <Pane layoutY="7.0" prefHeight="56.0" prefWidth="1082.0">
                      <children>
                         <TextField layoutX="682.0" layoutY="6.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="175.0" promptText="Serach" />
-                        <ImageView fitHeight="18.0" fitWidth="45.0" layoutX="391.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="31.0" fitWidth="48.0" layoutX="391.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../images/images%20(1).png" />
+                              <Image url="@assets/image/Ellipse1@2x.png" />
                            </image>
                         </ImageView>
                         <Label layoutX="27.0" layoutY="11.0" text="Services Form" textFill="#961c7a">
@@ -36,10 +36,10 @@
                   </Pane>
                   <TableView fx:id="tblServices" layoutX="18.0" layoutY="97.0" prefHeight="605.0" prefWidth="1050.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="142.39999961853027" text="ID" />
-                        <TableColumn fx:id="colPrice" prefWidth="223.99996948242188" text="Price" />
-                        <TableColumn fx:id="colType" prefWidth="224.79998779296875" text="Type" />
-                        <TableColumn fx:id="colStartTime" minWidth="0.0" prefWidth="226.4000244140625" text="Start time" />
+                        <TableColumn fx:id="colID" prefWidth="142.39999961853027" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 10px 0px 10px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0px 3px 5px;" text="ID" />
+                        <TableColumn fx:id="colPrice" prefWidth="223.99996948242188" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px;" text="Price" />
+                        <TableColumn fx:id="colType" prefWidth="224.79998779296875" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px;" text="Type" />
+                        <TableColumn fx:id="colStartTime" minWidth="0.0" prefWidth="226.4000244140625" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px;" text="Start time" />
                         <TableColumn fx:id="colEndTime" prefWidth="233.60003662109375" text="End time" />
                      </columns>
                   </TableView>

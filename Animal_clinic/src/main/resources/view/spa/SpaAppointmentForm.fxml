@@ -40,14 +40,14 @@
                   </Pane>
                   <TableView fx:id="tblAppoinments" layoutX="33.0" layoutY="114.0" prefHeight="542.0" prefWidth="1022.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="115.00003051757812" text="ID" />
-                        <TableColumn fx:id="colDate" prefWidth="145.0" text="Date" />
-                        <TableColumn fx:id="colPrice" prefWidth="141.0" text="Price" />
-                        <TableColumn fx:id="colTime" prefWidth="129.0" text="Time" />
-                        <TableColumn fx:id="colCustomerID" prefWidth="110.0" text="CustomerID" />
-                        <TableColumn fx:id="colCustomerName" prefWidth="128.0" text="Customer Name" />
-                        <TableColumn fx:id="colAnimalId" prefWidth="122.0" text="Animal Id" />
-                        <TableColumn fx:id="colStatus" prefWidth="130.0" text="Status" />
+                        <TableColumn fx:id="colID" prefWidth="103.00003051757812" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="ID" />
+                        <TableColumn fx:id="colDate" prefWidth="141.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="Date" />
+                        <TableColumn fx:id="colPrice" prefWidth="144.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="Price" />
+                        <TableColumn fx:id="colTime" prefWidth="119.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="Time" />
+                        <TableColumn fx:id="colCustomerID" prefWidth="118.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="CustomerID" />
+                        <TableColumn fx:id="colCustomerName" prefWidth="144.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="Customer Name" />
+                        <TableColumn fx:id="colAnimalId" prefWidth="122.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="Animal Id" />
+                        <TableColumn fx:id="colStatus" prefWidth="113.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-padding: 10px 0 10px 10px;" text="Status" />
                      </columns>
                   </TableView>
                   <Button layoutX="949.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Add">

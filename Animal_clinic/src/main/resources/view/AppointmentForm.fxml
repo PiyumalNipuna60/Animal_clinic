@@ -40,11 +40,11 @@
                   </Pane>
                   <TableView fx:id="tblAppoinments" layoutX="33.0" layoutY="114.0" prefHeight="560.0" prefWidth="1022.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="146.39999103546143" text="ID" />
-                        <TableColumn fx:id="colDate" prefWidth="215.2000274658203" text="Date" />
-                        <TableColumn fx:id="colPrice" prefWidth="268.7999267578125" text="Price" />
-                        <TableColumn fx:id="colTime" prefWidth="244.800048828125" text="Time" />
-                        <TableColumn fx:id="colCustomerID" prefWidth="143.0" text="CustomerID" />
+                        <TableColumn fx:id="colID" prefWidth="146.39999103546143" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%); -fx-background-radius: 10px 0px 10px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0px 3px 5px;" text="ID" />
+                        <TableColumn fx:id="colDate" prefWidth="215.2000274658203" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Date" />
+                        <TableColumn fx:id="colPrice" prefWidth="268.7999267578125" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Price" />
+                        <TableColumn fx:id="colTime" prefWidth="244.800048828125" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Time" />
+                        <TableColumn fx:id="colCustomerID" prefWidth="143.0" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #B084FF 100%); -fx-background-radius: 0px 10px 0px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  5px 3px 0px;" text="CustomerID" />
                      </columns>
                   </TableView>
                   <Button layoutX="949.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnModifyOnAction" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #55D4E8; -fx-background-radius: 15;" text="+  Add">

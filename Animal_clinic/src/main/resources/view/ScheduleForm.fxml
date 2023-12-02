@@ -31,12 +31,12 @@
                   </Pane>
                   <TableView fx:id="tblSchedule" layoutX="19.0" layoutY="102.0" prefHeight="565.0" prefWidth="1048.0">
                      <columns>
-                        <TableColumn fx:id="colID" prefWidth="118.4000244140625" text="ID" />
-                        <TableColumn fx:id="colName" prefWidth="204.79998779296875" text="Name" />
-                        <TableColumn fx:id="colDate" prefWidth="161.59991455078125" text="Date" />
-                        <TableColumn fx:id="colTime" prefWidth="194.4000244140625" text="Time" />
-                        <TableColumn fx:id="colDoctorID" prefWidth="186.4000244140625" text="DoctorID" />
-                        <TableColumn fx:id="colAppointmentID" prefWidth="180.800048828125" text="AppointmentID" />
+                        <TableColumn fx:id="colID" prefWidth="118.4000244140625" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 10px 0px 0px 10px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0px 3px 5px;" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="204.79998779296875" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Name" />
+                        <TableColumn fx:id="colDate" prefWidth="161.59991455078125" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Date" />
+                        <TableColumn fx:id="colTime" prefWidth="194.4000244140625" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="Time" />
+                        <TableColumn fx:id="colDoctorID" prefWidth="186.4000244140625" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  0 3px 0px;" text="DoctorID" />
+                        <TableColumn fx:id="colAppointmentID" prefWidth="180.800048828125" style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #CDB5E5 0%, #CDB5E5 100%); -fx-background-radius: 0px 10px 10px 0px; -fx-padding: 10px 0 10px 10px; -fx-background-insets: 2px  5px 3px 0px;" text="AppointmentID" />
                      </columns>
                   </TableView>
                   <TextField fx:id="txtSearch" layoutX="756.0" layoutY="12.0" prefHeight="30.0" prefWidth="206.0" promptText="Search" style="-fx-background-radius: 15;">
