@@ -140,6 +140,20 @@ create table Animal(
 
 desc Animal;
 
+create table injection(
+                       id varchar(10) primary key ,
+                       name varchar(20),
+                       number_of_times int,
+                       categories varchar(20),
+                       state varchar(20),
+                       Start_date date,
+                       end_date date,
+                       animalId varchar(10),
+                       constraint foreign key (animalId) references Animal(id) on delete cascade on update cascade
+);
+
+desc injection;
+
 create table DoctorMaintain(
                                id varchar(10) primary key ,
                                name varchar(20),
