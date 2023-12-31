@@ -69,7 +69,7 @@ public class AnimalModel {
             ResultSet resultSet = pstm.executeQuery();
 
             AnimalDTO animalDTO = null;
-            while (resultSet.next()) {
+            if (resultSet.next()) {
                 animalDTO = new AnimalDTO(
                         resultSet.getString(1),
                         resultSet.getString(2),
@@ -85,8 +85,7 @@ public class AnimalModel {
         }
     }
 
-    public int animalSave(AnimalDTO animalDTO) {
-        try {
+    public int animalSave(AnimalDTO animalDTO) throws SQLException {
             Connection connection=DBConnection.getInstance().getConnection();
             PreparedStatement pstm = connection.prepareStatement("insert into Animal values (?,?,?,?,?,?)");
             pstm.setObject(1,animalDTO.getId());
@@ -98,10 +97,6 @@ public class AnimalModel {
 
             int i =pstm.executeUpdate();
             return i;
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public int updateAnimal(AnimalDTO animalDTO) {

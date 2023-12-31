@@ -66,7 +66,7 @@
       </Pane>
       <ScrollPane fx:id="scrollPane" layoutX="44.0" layoutY="129.0" prefHeight="542.0" prefWidth="1012.0" style="-fx-background-color: #BFBFBF;">
          <content>
-            <AnchorPane prefHeight="538.0" prefWidth="1010.0">
+            <AnchorPane prefHeight="538.0" prefWidth="1010.0" style="-fx-background-color: rgba(0, 100, 100, 0.5);">
                <children>
                   <VBox fx:id="vboxName" layoutX="71.0" layoutY="23.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="230.0" prefWidth="240.0" style="-fx-background-radius: 20;">
                      <effect>

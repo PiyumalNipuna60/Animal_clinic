@@ -140,16 +140,21 @@ public class AnimalMaintainController {
         if (customerID==null){
 
         }else {
-            AnimalModel animal=new AnimalModel();
-            int i = animal.animalSave(new AnimalDTO(id,name,age,type,imageBytes,customerID));
-            if (i==1){
-                new Alert(Alert.AlertType.CONFIRMATION,"Save Animal...").show();
-                AnimalFormController.animalFormController.setData();
-                loadData();
-                clear();
-            }else {
-                new Alert(Alert.AlertType.ERROR,"Wrong Animal...").show();
+            try {
+                AnimalModel animal=new AnimalModel();
+                int i = animal.animalSave(new AnimalDTO(id,name,age,type,imageBytes,customerID));
+                if (i==1){
+                    new Alert(Alert.AlertType.CONFIRMATION,"Save Animal...").show();
+                    AnimalFormController.animalFormController.setData();
+                    loadData();
+                    clear();
+                }else {
+                    new Alert(Alert.AlertType.ERROR,"Wrong Animal...").show();
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
+
         }
     }
 
@@ -163,10 +168,9 @@ public class AnimalMaintainController {
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
-        String id = txtSearch.getText();
+        String id = txtID.getText();
         AnimalModel animal=new AnimalModel();
         AnimalDTO animalDTO =animal.searchAnimal(id);
-
         if (animalDTO==null){
             new Alert(Alert.AlertType.ERROR,"Empty value...").show();
         }else {
